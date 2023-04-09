@@ -1,0 +1,74 @@
+.footer {
+    background-color: $text-black;
+
+}
+
+.footer__wrapper {
+    padding: 29px 37px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1365px;
+    margin: 0 auto;
+}
+
+.footer__network-list {
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+}
+
+.footer__network-link {
+    background-color: $text-white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    &--telegram {
+        background-image: url("../../images/png/telegram.png");
+    }
+
+    &--vk {
+        background-image: url("../../images/png/vk.png");
+    }
+
+    &--youtube {
+        background-image: url("../../images/png/youtube.png");
+    }
+
+    &--instagram {
+        background-image: url("../../images/png/instagram.png");
+    }
+}
+
+.footer__copyright {
+    display: block;
+    color: $text-white;
+    font-family: $Muller;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 123%;
+}
+
+.footer__privacy-policy {
+    display: block;
+    color: $text-white;
+    font-family: $Muller;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 123%;
+}
+
+.footer__telephone {
+    display: block;
+    color: $text-white;
+    font-family: $Muller;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 123%;
+}

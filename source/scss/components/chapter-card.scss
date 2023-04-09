@@ -1,0 +1,114 @@
+.chapter-card {
+    display: flex;
+    border: 1px solid #161616;
+    border-radius: 25px;
+    position: relative;
+    min-height: 281px;
+    overflow: hidden;
+
+    &--pink {
+        background-color: $pink-color;
+    }
+
+    &--grey {
+        background-color: $grey-color;
+    }
+
+    &--yellow {
+        background-color: $yellow-color;
+    }
+
+    &--blue {
+        background-color: $grey-blue-color;
+    }
+}
+
+.chapter-card__text-block {
+    max-width: 500px;
+    min-width: 386px;
+    padding: 44px 30px 15px;
+    position: relative;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+        max-width: 440px;
+    }
+}
+
+.chapter-card__heading {
+    font-family: $YesevaOne;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 55px;
+
+    color: #FFFFFF;
+    position: absolute;
+    right: 0;
+    top: 50%;
+
+    transform: translateY(-50%) translateX(45%) rotate(-90deg);
+    z-index: 3;
+}
+
+.chapter-card__pic-block {
+    width: 67%;
+    height: auto;
+    background-size: cover;
+    background-position: 50% 70%;
+    position: relative;
+
+    &--pink {
+        background-image: url("../../images/popular-card/card-1.jpg");
+
+        &::before {
+            content: '';
+            width: 25%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            background: linear-gradient(90deg, #A8455D 0%, rgba(95, 113, 148, 0) 100%);
+        }
+    }
+
+    &--grey {
+        background-image: url("../../images/popular-card/card-2.jpg");
+
+        &::before {
+            content: '';
+            width: 25%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            background: linear-gradient(90deg, #7B8198 0%, rgba(95, 113, 148, 0) 100%);
+        }
+    }
+
+    &--yellow {
+        background-image: url("../../images/popular-card/card-4.jpg");
+        background-position: 50% 100%;
+
+        &::before {
+            content: '';
+            width: 25%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            background: linear-gradient(90deg, #B87900 0%, rgba(95, 113, 148, 0) 100%);
+        }
+    }
+
+    &--blue {
+        background-image: url("../../images/popular-card/card-3.jpg");
+        background-position: 50% 10%;
+
+        &::before {
+            content: '';
+            width: 25%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            background: linear-gradient(90deg, #435069 0%, rgba(95, 113, 148, 0) 100%);
+        }
+    }
+}

@@ -1,2 +1,17 @@
 @import "./global/fonts.scss";
 @import "./global/global.scss";
+@import "./global/theme.scss";
+@import "./global/colors.scss";
+
+
+@import "./components/header.scss";
+@import "./components/nav-header.scss";
+@import "./components/m-article.scss";
+@import "./components/popular.scss";
+@import "./components/popular-card.scss";
+@import "./components/rubric.scss";
+@import "./components/rubric-card.scss";
+@import "./components/chapters.scss";
+@import "./components/chapter-card.scss";
+@import "./components/sec-footer.scss";
+@import "./components/footer.scss";

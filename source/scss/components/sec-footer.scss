@@ -1,0 +1,70 @@
+.sec-footer {
+    background-color: $text-black;
+}
+
+.sec-footer__wrapper {
+    max-width: 755px;
+    margin: 0 auto;
+    padding: 41px 0;
+}
+
+.sec-footer__form {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.sec-footer__form-text {
+    font-family: $Muller;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 123%;
+    color: $text-white;
+    width: 48%;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 135px;
+        height: 18px;
+        background-image: url("../../images/svg/footer-arrow.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        bottom: -18px;
+        right: -20px;
+    }
+}
+
+.sec-footer__input-block {
+    display: flex;
+    align-items: center;
+    width: 48%;
+    gap: 24px;
+}
+
+.sec-footer__form-imput {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid $text-white;
+    color: $text-white;
+    font-family: $Muller;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 123%;
+    width: 267px;
+}
+
+.sec-footer__form-btn {
+    background-color: transparent;
+    border: 1px solid $text-white;
+    border-radius: 25px;
+    width: 73px;
+    height: 45px;
+    background-image: url("../../images/svg/arrow.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 26px 16px;
+}

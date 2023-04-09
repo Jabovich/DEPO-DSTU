@@ -1,0 +1,23 @@
+.popular {
+    border-bottom: 1px solid #000000;
+}
+
+.popular__wrapper {
+    padding: 60px 37px;
+    max-width: 1365px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        padding: 50px 10px;
+    }
+}
+
+.popular__card-list {
+    max-width: 1365px;
+    margin: 0 auto;
+    padding: 36px 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px;
+}

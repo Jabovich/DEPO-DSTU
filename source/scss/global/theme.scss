@@ -1,0 +1,47 @@
+.section-heading {
+  font-family: $YesevaOne;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 55px;
+
+  color: #161616;
+
+  @media (max-width: 768px) {
+    font-size: 34px;
+    line-height: 39px;
+  }
+
+  @media (max-width: 440px) {
+    font-size: 25px;
+    line-height: 29px;
+  }
+}
+
+.cards-title {
+  font-family: $Muller;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 120%;
+
+  text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 19px;
+    line-height: 120%;
+  }
+
+  @media (max-width: 440px) {
+    font-size: 18px;
+    line-height: 120%;
+  }
+}
+
+.cards-text {
+  font-family: $Muller;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 123%;
+}

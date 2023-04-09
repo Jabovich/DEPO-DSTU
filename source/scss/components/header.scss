@@ -1,0 +1,107 @@
+.header__about-list::before {
+    content: '';
+    display: block;
+    width: 130px;
+    height: 1px;
+    background-color: #000000;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.header__wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1365px;
+    padding: 0 37px;
+
+    @media (max-width: 768px) {
+        padding: 0 10px;
+    }
+}
+
+.header__logo-link {
+    display: block;
+    max-width: min-content;
+}
+
+.header__chapter-list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 378px;
+    width: 100%;
+    font-family: $Muller;
+    font-size: 17px;
+    line-height: 17px;
+}
+
+.header__chapter-item {
+    display: block;
+    padding: 57px 0;
+    max-width: 92px;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.header__about-list {
+    display: flex;
+    align-items: center;
+    font-family: $Muller;
+    font-size: 17px;
+    line-height: 17px;
+    justify-content: space-between;
+    max-width: 426px;
+    width: 100%;
+
+    @media (max-width: 1024px) {
+        max-width: 184px;
+    }
+}
+
+.header__about-item {
+    display: block;
+    padding: 57px 0px;
+    max-width: 92px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.header__user-list {
+    max-width: 132px;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+        max-width: 90px;
+    }
+}
+
+.header__user-item {
+    display: block;
+
+    &--profile {
+        background-image: url("../images/svg/user-profile.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        width: 36px;
+        height: 36px;
+
+    }
+
+    &--search {
+        background-image: url("../images/svg/user-search.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        width: 29px;
+        height: 29px;
+    }
+}
