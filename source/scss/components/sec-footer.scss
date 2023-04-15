@@ -6,12 +6,26 @@
     max-width: 755px;
     margin: 0 auto;
     padding: 41px 0;
+
+    @media (max-width: 768px) {
+        max-width: 638px;
+        padding: 31px 10px 25px;
+    }
+
+    @media (max-width: 670px) {
+        padding: 30px 10px 18px;
+    }
 }
 
 .sec-footer__form {
     display: flex;
     justify-content: space-between;
     gap: 25px;
+
+    @media (max-width: 670px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .sec-footer__form-text {
@@ -34,6 +48,22 @@
         background-repeat: no-repeat;
         bottom: -18px;
         right: -20px;
+
+        @media (max-width: 670px) {
+            display: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 670px) {
+        text-align: center;
+    }
+
+    @media (max-width: 440px) {
+        width: 100%;
     }
 }
 
@@ -42,6 +72,16 @@
     align-items: center;
     width: 48%;
     gap: 24px;
+
+    @media (max-width: 768px) {
+        gap: 21px;
+        max-width: 42%;
+    }
+
+    @media (max-width: 670px) {
+        max-width: 283px;
+        width: 100%;
+    }
 }
 
 .sec-footer__form-imput {
@@ -55,6 +95,11 @@
     font-size: 17px;
     line-height: 123%;
     width: 267px;
+
+    @media (max-width: 768px) {
+        width: 193px;
+        font-size: 14px;
+    }
 }
 
 .sec-footer__form-btn {
@@ -67,4 +112,9 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 26px 16px;
+
+    @media (max-width: 768px) {
+        width: 62px;
+        height: 38px;
+    }
 }

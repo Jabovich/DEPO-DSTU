@@ -1,0 +1,46 @@
+.mobile-header {
+    position: fixed;
+    background-color: #ffffff;
+    z-index: 10;
+    width: 100%;
+
+    @media (min-width: 540px) {
+        display: none;
+    }
+}
+
+.mobile-header__wrapper {
+    display: flex;
+    padding: 14px 18px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-header__burger {}
+
+.mobile-header__logo-link {
+    width: 32px;
+    height: 40px;
+}
+
+.mobile-header__profile {
+    background-image: url("../images/svg/user-profile.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    width: 36px;
+    height: 36px;
+
+    @media (max-width: 768px) {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+.mobile-header__nav-list {}
+
+.mobile-header__nav-list--close {
+    display: none;
+}
+
+.mobile-header__nav-item {}

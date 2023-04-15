@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
   <title>ДЕПО</title>
 </head>
@@ -22,21 +23,70 @@
         <a class="header__chapter-item" href="#">Коуч</a>
       </nav>
       <nav class="header__about-list">
-        <a class="header__about-item" href="#">О нас</a>
+        <a class="header__about-item" href="#">О нас</a>
         <a class="header__about-item" href="#">Контакты</a>
       </nav>
       <div class="header__user-list">
-        <a href="" class="header__user-item header__user-item--profile"><span class="visually-hidden">Профиль</span></a>
-        <a href="" class="header__user-item header__user-item--search"><span class="visually-hidden">Поиск</span></a>
+        <a href="#" class="header__user-item header__user-item--profile"><span
+            class="visually-hidden">Профиль</span></a>
+        <a href="#" class="header__user-item header__user-item--search"><span class="visually-hidden">Поиск</span></a>
       </div>
     </div>
   </header>
+  <div class="mobile-header">
+    <div class="mobile-header__wrapper">
+      <button class="nav-toggle mobile-header__burger">
+        <span class="bar-top"></span>
+        <span class="bar-mid"></span>
+        <span class="bar-bot"></span>
+      </button>
+      <a class="mobile-header__logo-link" href="#">
+        <svg viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_560_381)">
+            <path
+              d="M17.6133 1.13158e-05V0.0791417C17.0773 0.0264116 16.5388 1.64591e-06 16 1.13158e-05C13.1404 -0.00336224 10.3329 0.747636 7.8729 2.17392C5.54497 3.52342 3.60172 5.42443 2.22223 7.70175C0.76425 10.1082 -0.00343696 12.8548 1.15673e-05 15.6522V40H2.22223V31.3044H29.7778V40H32V1.13158e-05H17.6133ZM29.7778 14.7461C29.7982 15.0452 29.8089 15.3478 29.8089 15.6522C29.8089 15.9565 29.7982 16.2609 29.7778 16.5583V29.1304H16.9262C16.6205 29.1504 16.3111 29.1609 16 29.1609C15.6889 29.1609 15.3778 29.1504 15.0738 29.1304H2.22223V16.5583C2.20179 16.2591 2.19112 15.9565 2.19112 15.6522C2.19112 15.3478 2.20179 15.0435 2.22223 14.7461V14.5652H2.23557C2.77868 7.92175 8.25779 2.6174 15.0738 2.17392C15.3796 2.15392 15.6889 2.14349 16 2.14349C16.3111 2.14349 16.6222 2.15392 16.9262 2.17392H29.7778V14.7461Z"
+              fill="#161616" />
+            <path
+              d="M24.1271 29.1304C26.455 27.7809 28.3983 25.8799 29.7778 23.6026L29.8089 23.5513C31.2437 21.1555 32 18.4289 32 15.6522C32 12.8755 31.2437 10.1489 29.8089 7.75305L29.7778 7.70175C28.3983 5.42443 26.455 3.52342 24.1271 2.17392C22.1378 1.02044 19.9151 0.305542 17.6142 0.0791417C17.0778 0.0263826 16.5391 -2.74199e-05 16 1.13158e-05C13.1404 -0.00336224 10.3328 0.747636 7.87289 2.17392C5.54496 3.52342 3.60171 5.42443 2.22222 7.70175C0.767453 10.1096 1.58309e-05 12.8552 1.58309e-05 15.6522C1.58309e-05 18.4491 0.767453 21.1948 2.22222 23.6026C3.60171 25.8799 5.54496 27.7809 7.87289 29.1304H0V40H2.22222V31.3044H29.7778V40H32V29.1304H24.1271ZM16 29.1609C15.6889 29.1609 15.3778 29.1504 15.0738 29.1304C8.25778 28.687 2.77867 23.3826 2.23556 16.7391C2.23556 16.7391 2.19111 15.9565 2.19111 15.6522C2.19111 15.3478 2.23556 14.5652 2.23556 14.5652C2.77867 7.92175 8.25778 2.6174 15.0738 2.17392C15.3796 2.15392 15.6889 2.14349 16 2.14349C16.3111 2.14349 16.6222 2.15392 16.9262 2.17392C23.8044 2.62088 29.3209 8.0174 29.7778 14.7461C29.7982 15.0452 29.8089 15.3478 29.8089 15.6522C29.8089 15.9565 29.7982 16.2609 29.7778 16.5583C29.3209 23.287 23.8044 28.6835 16.9262 29.1304C16.6222 29.1504 16.3111 29.1609 16 29.1609Z"
+              fill="#161616" />
+            <path
+              d="M2.22217 16.5582V16.7391H2.2355C2.23017 16.6791 2.22217 16.6182 2.22217 16.5582ZM2.22217 16.5582V16.7391H2.2355C2.23017 16.6791 2.22217 16.6182 2.22217 16.5582ZM2.22217 14.5652V14.7461C2.22217 14.6861 2.23017 14.6252 2.2355 14.5652H2.22217ZM2.22217 16.7391H2.2355C2.23017 16.6791 2.22572 16.6182 2.22217 16.5582V16.7391ZM2.22217 16.5582V16.7391H2.2355C2.23017 16.6791 2.22217 16.6182 2.22217 16.5582Z"
+              fill="#161616" />
+            <path
+              d="M29.8089 7.75306L29.7778 7.70175C28.3983 5.42443 26.455 3.52342 24.1271 2.17392C22.1378 1.02044 19.9151 0.305542 17.6142 0.0791418C17.0778 0.0263826 16.5391 -2.74199e-05 16 1.13158e-05C13.1404 -0.00336224 10.3328 0.747636 7.87287 2.17392C5.54495 3.52342 3.60169 5.42443 2.22221 7.70175C0.767437 10.1096 0 12.8552 0 15.6522C0 18.4491 0.767437 21.1948 2.22221 23.6026C3.60169 25.8799 5.54495 27.7809 7.87287 29.1304C10.3342 30.5536 13.1409 31.3043 16 31.3043C18.8591 31.3043 21.6658 30.5536 24.1271 29.1304C26.455 27.7809 28.3983 25.8799 29.7778 23.6026L29.8089 23.5513C31.2436 21.1555 31.9999 18.4289 31.9999 15.6522C31.9999 12.8755 31.2436 10.1489 29.8089 7.75306ZM29.7778 16.5583C29.3209 23.287 23.8044 28.6835 16.9262 29.1304C16.6204 29.1504 16.3111 29.1609 16 29.1609C15.6889 29.1609 15.3778 29.1504 15.0738 29.1304C8.25776 28.687 2.77865 23.3826 2.23554 16.7391H2.22221V16.5583C2.20176 16.2591 2.1911 15.9565 2.1911 15.6522C2.1911 15.3478 2.20176 15.0435 2.22221 14.7461V14.5652H2.23554C2.77865 7.92175 8.25776 2.6174 15.0738 2.17392C15.3795 2.15392 15.6889 2.14349 16 2.14349C16.3111 2.14349 16.6222 2.15392 16.9262 2.17392C23.8044 2.62088 29.3209 8.0174 29.7778 14.7461C29.7982 15.0452 29.8089 15.3478 29.8089 15.6522C29.8089 15.9565 29.7982 16.2609 29.7778 16.5583Z"
+              fill="#161616" />
+            <path
+              d="M2.23554 14.5652H13.1111C13.4058 14.5652 13.6884 14.6797 13.8968 14.8836C14.1051 15.0874 14.2222 15.3639 14.2222 15.6522C14.2222 15.9405 14.1051 16.2169 13.8968 16.4208C13.6884 16.6246 13.4058 16.7391 13.1111 16.7391H2.23554C2.77865 23.3826 8.25776 28.687 15.0738 29.1304C15.3795 29.1504 15.6889 29.1609 16 29.1609C16.3111 29.1609 16.6222 29.1504 16.9262 29.1304H32V31.3044H16C13.1404 31.3082 10.3327 30.5571 7.87287 29.1304C5.54476 27.7812 3.60145 25.8801 2.22221 23.6026C0.767437 21.1948 0 18.4491 0 15.6522C0 12.8552 0.767437 10.1096 2.22221 7.70175C3.6017 5.42443 5.54495 3.52342 7.87287 2.17392C10.3328 0.747636 13.1404 -0.00336224 16 1.13158e-05C16.5388 1.64591e-06 17.0772 0.0264116 17.6133 0.0791418V1.13158e-05H32V2.17392H16.9262C16.6204 2.15392 16.3111 2.14349 16 2.14349C15.6889 2.14349 15.3778 2.15392 15.0738 2.17392C8.25776 2.6174 2.77865 7.92175 2.23554 14.5652Z"
+              fill="#161616" />
+            <path
+              d="M32 29.1304V39.9999H29.7778V31.3043H2.22222V39.9999H0V29.1304H15.0738C15.3796 29.1504 15.6889 29.1608 16 29.1608C16.3111 29.1608 16.6222 29.1504 16.9262 29.1304H32Z"
+              fill="#161616" />
+          </g>
+          <defs>
+            <clipPath id="clip0_560_381">
+              <rect width="32" height="40" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+      <a href="#" class="mobile-header__profile">
+        <span class="visually-hidden">Профиль</span></a>
+    </div>
+    <div class="mobile-header__nav-list mobile-header__nav-list--close">
+      <a class="mobile-header__nav-item" href="#">Арт</a>
+      <a class="mobile-header__nav-item" href="#">Медиа</a>
+      <a class="mobile-header__nav-item" href="#">Проф</a>
+      <a class="mobile-header__nav-item" href="#">Коуч</a>
+      <a class="mobile-header__nav-item" href="#">О нас</a>
+      <a class="mobile-header__nav-item" href="#">Контакты</a>
+    </div>
+  </div>
   <main>
     <h1 class="visually-hidden">ДЕПО ДГТУ</h1>
     <section class="nav-header">
       <div class="nav-header__wrapper">
-        <div class="nav-header__item nav-header__item--svg">
-          <svg width="contain" height="contain" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="nav-header__item nav-header__item--svg nav-header__item--yellow">
+          <svg viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="32.5" cy="32.5" r="32.5" fill="#FEC65A" />
             <g clip-path="url(#clip0_230_110)">
               <path
@@ -65,8 +115,8 @@
             </defs>
           </svg>
         </div>
-        <div class="nav-header__item nav-header__item--svg">
-          <svg width="contain" height="contain" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="nav-header__item nav-header__item--svg nav-header__item--pink">
+          <svg viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="32.5" cy="32.5" r="32.5" fill="#FD7B9A" />
             <g clip-path="url(#clip0_230_112)">
               <path
@@ -96,10 +146,26 @@
           </svg>
         </div>
         <div class="nav-header__item nav-header__item--text">
+          <div class="nav-header__item-pic">
+            <svg viewBox="0 0 166 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M25.6003 6.64547V6.60954C24.4433 4.8049 22.8145 3.29761 20.8634 2.22592C19.1887 1.31034 17.3176 0.744182 15.3813 0.567096C14.9341 0.507211 14.4805 0.507211 14.0269 0.507211C11.631 0.504599 9.27844 1.09829 7.21643 2.22592C5.26426 3.29844 3.63359 4.80543 2.47306 6.60954C1.25288 8.51516 0.610465 10.6893 0.613291 12.9035V25.2998H27.4406V12.9035C27.442 10.7032 26.8066 8.54248 25.6003 6.64547ZM14.8045 23.5751C14.5453 23.5751 14.2861 23.5751 14.0269 23.5751C13.7677 23.5751 13.5085 23.5751 13.2493 23.5751H2.47306V13.6221C2.47306 13.3826 2.47306 12.4244 2.47306 12.1849V12.0412C2.70092 9.48403 3.9137 7.08725 5.89109 5.2862C7.86849 3.48515 10.4793 2.39931 13.2493 2.22592C13.5085 2.22592 13.7677 2.22592 14.0269 2.22592C14.2861 2.22592 14.5453 2.22592 14.8045 2.22592C17.5986 2.40366 20.2285 3.51013 22.2083 5.34083C24.188 7.17153 25.3837 9.60267 25.5743 12.1849C25.5743 12.4244 25.5743 12.664 25.5743 12.9035C25.5743 13.1431 25.5743 13.3826 25.5743 13.6221V23.5751H14.8045Z"
+                fill="#161616" />
+              <path
+                d="M51.7353 12.0412H60.8527C61.096 12.0431 61.3288 12.1334 61.5007 12.2927C61.6309 12.4126 61.7199 12.5653 61.7565 12.7318C61.7931 12.8982 61.7757 13.071 61.7065 13.2283C61.6373 13.3857 61.5193 13.5206 61.3674 13.6162C61.2155 13.7119 61.0365 13.7639 60.8527 13.7659H51.7353C51.9616 16.3209 53.1724 18.7161 55.1475 20.5161C57.1226 22.3161 59.731 23.4016 62.4986 23.5751C62.7513 23.5751 63.0105 23.5751 63.2762 23.5751C63.5419 23.5751 63.7946 23.5751 64.0473 23.5751H68.0455V25.2998H63.2762C60.8773 25.3026 58.5221 24.7067 56.4592 23.5751C54.4503 22.4802 52.7851 20.92 51.6282 19.0485C50.4714 17.1769 49.8628 15.0589 49.8626 12.9035C49.8597 10.6893 50.5021 8.51515 51.7223 6.60954C52.8793 4.80489 54.5081 3.2976 56.4592 2.22592C58.5239 1.09889 60.8783 0.505287 63.2762 0.507207H68.0455V2.22592H64.0473C63.7946 2.22592 63.5354 2.22592 63.2762 2.22592C63.017 2.22592 62.7513 2.22592 62.4986 2.22592C59.7309 2.40206 57.1232 3.48911 55.1484 5.2899C53.1737 7.09069 51.9628 9.48594 51.7353 12.0412Z"
+                fill="#161616" />
+              <path
+                d="M116.446 0.507202V25.2998H114.541V2.26784H92.3729V25.2998H90.4678V0.507202H103.389C103.648 0.507202 102.618 0.507202 102.883 0.507202C103.099 0.51969 103.316 0.51969 103.532 0.507202H116.446Z"
+                fill="#161616" />
+              <path
+                d="M163.878 6.64547V6.60954C162.721 4.80489 161.092 3.2976 159.141 2.22592C157.456 1.3062 155.574 0.739892 153.626 0.567092C153.186 0.531161 152.732 0.507207 152.278 0.507207C149.88 0.505287 147.526 1.09889 145.461 2.22592C143.51 3.2976 141.881 4.80489 140.724 6.60954C139.509 8.5148 138.869 10.686 138.869 12.8975C138.869 15.109 139.509 17.2802 140.724 19.1855C141.88 20.9897 143.509 22.4954 145.461 23.5631C147.522 24.6884 149.872 25.2821 152.265 25.2821C154.659 25.2821 157.009 24.6884 159.069 23.5631C161.022 22.4954 162.651 20.9897 163.806 19.1855V19.1496C165.011 17.2519 165.646 15.0917 165.646 12.8915C165.646 10.6914 165.011 8.53111 163.806 6.63349L163.878 6.64547ZM163.878 13.6221C163.687 16.2037 162.491 18.6341 160.511 20.4638C158.531 22.2935 155.901 23.3988 153.108 23.5751C152.849 23.5751 152.589 23.5751 152.33 23.5751C152.071 23.5751 151.805 23.5751 151.553 23.5751C148.785 23.4016 146.177 22.3161 144.202 20.5161C142.226 18.7161 141.016 16.3209 140.789 13.7659V13.6221C140.789 13.3826 140.789 13.143 140.789 12.9035C140.789 12.664 140.789 12.4244 140.789 12.1849V12.0412C141.015 9.49451 142.218 7.10614 144.18 5.30651C146.143 3.50688 148.737 2.41438 151.494 2.22592C151.747 2.22592 152.006 2.22592 152.272 2.22592C152.538 2.22592 152.79 2.22592 153.049 2.22592C155.843 2.40489 158.472 3.51176 160.452 5.34221C162.431 7.17266 163.627 9.6031 163.819 12.1849C163.819 12.4244 163.819 12.664 163.819 12.9035C163.819 13.143 163.839 13.3826 163.819 13.6221H163.878Z"
+                fill="#161616" />
+            </svg>
+          </div>
           <span class="nav-header__span">Образовательная платформа</span>
         </div>
-        <div class="nav-header__item nav-header__item--svg">
-          <svg width="contain" height="contain" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="nav-header__item nav-header__item--svg nav-header__item--blue">
+          <svg viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="32.5" cy="32.5" r="32.5" fill="#5F7194" />
             <g clip-path="url(#clip0_230_113)">
               <path
@@ -128,8 +194,8 @@
             </defs>
           </svg>
         </div>
-        <div class="nav-header__item nav-header__item--svg">
-          <svg width="contain" height="contain" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="nav-header__item nav-header__item--svg nav-header__item--grey">
+          <svg viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="32.5" cy="32.5" r="32.5" fill="#B9BED1" />
             <g clip-path="url(#clip0_230_111)">
               <path
@@ -162,14 +228,15 @@
     </section>
     <section class="m-article">
       <div class="m-article__wrapper">
-        <h2 class="m-article__title">Томас Коул “Путь империи”</h2>
+        <h2 class="m-article__title">Томас Коул “Путь империи”</h2>
         <div class="m-article__image">
           <img src="images/m-article/m-article-content.jpg" alt="Фото главной карточки">
         </div>
         <div class="m-article__text-block">
           <p class="m-article__text">«Путь империи» — серия из пяти картин американского художника Томаса Коула,
             написанных в 1833-1836 гг.</p>
-          <p class="m-article__text">В ней переданы чувства, распространённые в американском общество того времени,
+          <p class="m-article__text m-article__text--desktop">В ней переданы чувства, распространённые в американском
+            общество того времени,
             когда многие считали пасторализм идеальным этапом
             развития человечества, а идею империи ассоциировались с алчностью и неизбежным разложением. Коул
             неоднократно обращался
@@ -179,10 +246,10 @@
       </div>
     </section>
     <section class="popular">
-      <div class="popular__wrapper">
-        <h2 class="popular__heading section-heading">Популярное</h2>
-        <div class="popular__card-list">
-          <div class="popular-card popular-card--first popular__card-item">
+      <h2 class="popular__heading section-heading">Популярное</h2>
+      <div class="popular__wrapper" id="popular-swiper">
+        <div class="popular__card-list" id="popular-wrapper">
+          <div class="popular-card popular-card--first popular__card-item" id="popular-slide">
             <span class="popular-card__img-hashtag popular-card__img-hashtag--pink">#КОПИМРАЙТ</span>
             <div class="popular-card__text-block">
               <h3 class="popular-card__heading cards-title">Статья из раздела медиа</h3>
@@ -190,7 +257,7 @@
               </p>
             </div>
           </div>
-          <div class="popular-card popular-card--second popular__card-item">
+          <div class="popular-card popular-card--second popular__card-item" id="popular-slide">
             <span class="popular-card__img-hashtag popular-card__img-hashtag--grey">#КОПИМРАЙТ</span>
             <div class="popular-card__text-block">
               <h3 class="popular-card__heading cards-title">Статья из раздела медиа</h3>
@@ -198,7 +265,7 @@
               </p>
             </div>
           </div>
-          <div class="popular-card popular-card--third popular__card-item">
+          <div class="popular-card popular-card--third popular__card-item" id="popular-slide">
             <span class="popular-card__img-hashtag popular-card__img-hashtag--blue">#КОПИМРАЙТ</span>
             <div class="popular-card__text-block">
               <h3 class="popular-card__heading cards-title">Статья из раздела медиа</h3>
@@ -206,7 +273,7 @@
               </p>
             </div>
           </div>
-          <div class="popular-card popular-card--fourth popular__card-item">
+          <div class="popular-card popular-card--fourth popular__card-item" id="popular-slide">
             <span class="popular-card__img-hashtag popular-card__img-hashtag--yellow">#КОПИМРАЙТ</span>
             <div class="popular-card__text-block">
               <h3 class="popular-card__heading cards-title">Статья из раздела медиа</h3>
@@ -328,17 +395,32 @@
       <div class="footer__network-list">
         <a class="footer__network-link footer__network-link--telegram" href="#"><span
             class="visually-hidden">телеграмм</span></a>
-        <a class="footer__network-link footer__network-link--vk" href="#"><span class="visually-hidden">ВК</span></a>
+        <a class="footer__network-link footer__network-link--vk" href="#">
+          <span class="visually-hidden">ВК</span></a>
         <a class="footer__network-link footer__network-link--youtube" href="#"><span
             class="visually-hidden">Ютуб</span></a>
-        <a class="footer__network-link footer__network-link--instagram" href="#"><span
-            class="visually-hidden">Инстаграмм</span></a>
       </div>
       <p class="footer__copyright">ДГТУ, МКМТ 2022 ©</p>
       <a class="footer__privacy-policy" href="#">Политика конфиденциальности</a>
       <a class="footer__telephone" href="tel:+79281951915">+7 (928) 195-19-15</a>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="./js/index.js"></script>
+  <script>
+    console.log(1);
+    if (window.innerWidth <= 440) {
+      toggleSwiper()
+    }
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+
+      toggle.addEventListener('click', function (e) {
+        this.classList.toggle('opened');
+      });
+    })();
+  </script>
+
 </body>
 
 </html>

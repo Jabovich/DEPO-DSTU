@@ -10,12 +10,31 @@
     align-items: center;
     max-width: 1365px;
     margin: 0 auto;
+
+    @media (max-width: 768px) {
+        padding: 29px 10px;
+    }
+
+    @media (max-width: 670px) {
+        flex-direction: column;
+        padding: 21px 10px;
+    }
 }
 
 .footer__network-list {
     display: flex;
     justify-content: space-between;
-    width: 220px;
+    max-width: 161px;
+    width: 100%;
+
+    @media (max-width: 768px) {
+        max-width: 124px;
+    }
+
+    @media (max-width: 670px) {
+        max-width: 162px;
+        margin-bottom: 29px;
+    }
 }
 
 .footer__network-link {
@@ -28,18 +47,34 @@
 
     &--telegram {
         background-image: url("../../images/png/telegram.png");
+        background-size: 21px 22px;
+
+        @media (max-width: 768px) {
+            background-size: 18px 19px;
+        }
     }
 
     &--vk {
         background-image: url("../../images/png/vk.png");
+        background-size: 22px 23px;
+
+        @media (max-width: 768px) {
+            background-size: 19px 19px;
+        }
     }
 
     &--youtube {
         background-image: url("../../images/png/youtube.png");
+        background-size: 23px 24px;
+
+        @media (max-width: 768px) {
+            background-size: 19px 20px;
+        }
     }
 
-    &--instagram {
-        background-image: url("../../images/png/instagram.png");
+    @media (max-width: 768px) {
+        width: 36px;
+        height: 36px;
     }
 }
 
@@ -51,6 +86,14 @@
     font-weight: 300;
     font-size: 17px;
     line-height: 123%;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 670px) {
+        margin-bottom: 5px;
+    }
 }
 
 .footer__privacy-policy {
@@ -61,6 +104,14 @@
     font-weight: 300;
     font-size: 17px;
     line-height: 123%;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 670px) {
+        margin-bottom: 5px;
+    }
 }
 
 .footer__telephone {
@@ -71,4 +122,12 @@
     font-weight: 300;
     font-size: 17px;
     line-height: 123%;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 670px) {
+        margin-bottom: 5px;
+    }
 }
