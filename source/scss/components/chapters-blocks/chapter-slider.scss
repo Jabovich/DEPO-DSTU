@@ -1,0 +1,151 @@
+.chapter-slider {
+    padding: 167px 0;
+
+    @media (max-width: 768px) {
+        padding: 92px 0 66px;
+    }
+}
+
+.chapter-slider__wrapper {
+    max-width: 1365px;
+    margin: 0 auto;
+    padding: 0 37px;
+
+    @media (max-width: 768px) {
+        padding: 0 10px;
+    }
+}
+
+.chapter-slider__carusel {
+    position: relative;
+    width: 100%;
+    height: 331px;
+    border: 1px solid #161616;
+    border-radius: 25px;
+
+    overflow: hidden;
+}
+
+.chapter-slider__hashtag {
+    position: absolute;
+    top: 25px;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 2;
+
+    font-family: $Muller;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 120%;
+
+    color: #ffffff;
+
+    @media (max-width: 440px) {
+        font-size: 16px;
+    }
+}
+
+.chapter-slider__week {
+    position: absolute;
+    top: 50%;
+    left: -80px;
+    transform: translateY(-50%) rotate(-90deg);
+    z-index: 2;
+
+    font-family: $Muller;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 33px;
+    line-height: 123%;
+
+    color: #ffffff;
+
+    @media (max-width: 440px) {
+        font-size: 12px;
+        left: -20px;
+    }
+}
+
+.chapter-slider__list {
+    height: 100%;
+    display: flex;
+}
+
+.chapter-slider__item {
+    background: linear-gradient(0deg, rgba(22, 22, 22, 0.55), rgba(22, 22, 22, 0.55)), url("../../../images/chapters-slider/chapters-slide-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    flex-direction: column;
+    justify-content: flex-end;
+
+    filter: grayscale(100%);
+
+}
+
+.chapter-slider__item-title {
+    font-family: $YesevaOne;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 123%;
+    color: #ffffff;
+
+    padding-bottom: 45px;
+
+    @media (max-width: 440px) {
+        font-size: 25px;
+
+    }
+}
+
+.chapter-slider__item-text {
+    font-family: $Muller;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: #ffffff;
+    text-align: center;
+
+    padding-bottom: 53px;
+    max-width: 530px;
+
+    @media (max-width: 440px) {
+        font-size: 14px;
+    }
+}
+
+.chapter-slider__pagination {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 10;
+    gap: 5px;
+
+}
+
+.swiper-pagination-bullet {
+    display: block;
+    width: 130px;
+    height: 2px;
+    background-color: #ffffff;
+
+    @media (max-width: 768px) {
+        width: 72px;
+    }
+
+    @media (max-width: 440px) {
+        width: 56px;
+    }
+
+
+}

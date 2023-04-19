@@ -11,6 +11,8 @@
 }
 
 .header {
+    border-bottom: 1px solid #000000;
+
     @media (max-width: 540px) {
         display: none;
     }
@@ -69,6 +71,11 @@
     text-decoration: none;
     color: black;
     text-align: center;
+
+    &-art--active {
+        background-color: $pink-color;
+        color: #ffffff;
+    }
 
     @media (max-width: 768px) {
         padding: 42px 5px;

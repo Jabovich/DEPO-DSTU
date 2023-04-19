@@ -17,7 +17,27 @@ const toggleSwiper = () => {
         },
         loop: true,
         autoplay: {
-            delay: 2500,
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+    });
+}
+
+const toggleChapterSlider = () => {
+    var swiper = new Swiper('.chapter-slider__carusel', {
+        slidesPerView: "auto",
+        initialSlide: 1,
+        spaceBetween: 0,
+        pagination: {
+            el: ".chapter-slider__pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + "</span>";
+            }
+        },
+        loop: true,
+        autoplay: {
+            delay: 5000,
             disableOnInteraction: false,
         },
     });
