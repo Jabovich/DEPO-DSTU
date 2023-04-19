@@ -1,36 +1,142 @@
 import gulp from 'gulp';
+import plumber from 'gulp-plumber';
+import gulpIf from 'gulp-if';
+import dartSass from "sass";
+import gulpSass from "gulp-sass";
+import postcss from 'gulp-postcss';
+import postUrl from 'postcss-url';
+import autoprefixer from 'autoprefixer';
+import csso from 'postcss-csso';
+import terser from 'gulp-terser';
+import squoosh from 'gulp-libsquoosh';
+import svgo from 'gulp-svgmin';
+import {stacksvg} from "gulp-stacksvg";
+import {deleteAsync} from 'del';
 import browser from 'browser-sync';
-import dartSass from 'sass';
-import gulpSass from 'gulp-sass';
+import bemlinter from 'gulp-html-bemlinter';
+import {htmlValidator} from "gulp-w3c-html-validator";
+
 const sass = gulpSass(dartSass);
+let isDevelopment = true;
 
-export const styles = () => {
-    return gulp.src('./source/scss/style.scss', { sourcemaps: true })
-        .pipe(sass())
-        .pipe(gulp.dest('./source/css', { sourcemaps: '.' }))
-        .pipe(browser.stream());
+export function processMarkup() {
+  return gulp.src('source/*.html')
+    .pipe(gulp.dest('build'));
 }
 
-export const server = (done) => {
-    browser.init({
-        server: {
-            baseDir: 'source'
-        },
-        cors: true,
-        notify: false,
-        ui: false,
-    });
-    done();
+export function lintBem() {
+  return gulp.src('source/*.html')
+    .pipe(bemlinter());
 }
 
-export const watcher = () => {
-    gulp.watch('./source/scss/**/*.scss', gulp.series(styles));
-    gulp.watch('./source/scss/**/*.scss').on('change', browser.reload);
-    gulp.watch('./source/*.html').on('change', browser.reload);
-};
+export function validateMarkup() {
+  return gulp.src('source/*.html')
+    .pipe(htmlValidator.analyzer())
+    .pipe(htmlValidator.reporter({throwErrors: true}));
+}
 
-export default gulp.series(
-    server,
-    watcher,
-    styles
-);
+export function processStyles() {
+  return gulp.src('source/sass/*.scss', {sourcemaps: isDevelopment})
+    .pipe(plumber())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss([
+      postUrl({assetsPath: '../'}),
+      autoprefixer(),
+      csso()
+    ]))
+    .pipe(gulp.dest('build/css', {sourcemaps: isDevelopment}))
+    .pipe(browser.stream());
+}
+
+export function processScripts() {
+  return gulp.src('source/js/**/*.js')
+    .pipe(terser())
+    .pipe(gulp.dest('build/js'))
+    .pipe(browser.stream());
+}
+
+export function optimizeImages() {
+  return gulp.src('source/images/**/*.{png,jpg}')
+    .pipe(gulpIf(!isDevelopment, squoosh()))
+    .pipe(gulp.dest('build/images'))
+}
+
+export function optimizeVector() {
+  return gulp.src(['source/images/**/*.svg', '!source/img/icons/**/*.svg'])
+    .pipe(svgo())
+    .pipe(gulp.dest('build/images'));
+}
+
+export function createStack() {
+  return gulp.src('source/img/icons/**/*.svg')
+    .pipe(svgo())
+    .pipe(stacksvg())
+    .pipe(gulp.dest('build/img/icons'));
+}
+
+export function copyAssets() {
+  return gulp.src([
+    'source/fonts/**/*.{woff2,woff}',
+    'source/*.ico',
+    'source/*.webmanifest',
+  ], {
+    base: 'source'
+  })
+    .pipe(gulp.dest('build'));
+}
+
+export function startServer(done) {
+  browser.init({
+    server: {
+      baseDir: 'build'
+    },
+    cors: true,
+    notify: false,
+    ui: false,
+  });
+  done();
+}
+
+function reloadServer(done) {
+  browser.reload();
+  done();
+}
+
+function watchFiles() {
+  gulp.watch('source/sass/**/*.scss', gulp.series(processStyles));
+  gulp.watch('source/js/script.js', gulp.series(processScripts));
+  gulp.watch('source/*.html', gulp.series(processMarkup, reloadServer));
+}
+
+function compileProject(done) {
+  gulp.parallel(
+    processMarkup,
+    processStyles,
+    processScripts,
+    optimizeVector,
+    createStack,
+    copyAssets,
+    optimizeImages,
+  )(done);
+}
+
+function deleteBuild() {
+  return deleteAsync('build');
+}
+
+export function buildProd(done) {
+  isDevelopment = false;
+  gulp.series(
+    deleteBuild,
+    compileProject
+  )(done);
+}
+
+export function runDev(done) {
+  gulp.series(
+    deleteBuild,
+    compileProject,
+    startServer,
+    watchFiles
+  )(done);
+}

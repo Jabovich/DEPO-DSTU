@@ -1,2 +1,5 @@
-/node_modules
-/source/css
+node_modules
+*.min.*
+build
+.idea
+.DS_Store
