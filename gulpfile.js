@@ -56,7 +56,7 @@ export function processScripts() {
 }
 
 export function optimizeImages() {
-  return gulp.src('source/images/**/*.{png,jpg}')
+  return gulp.src(['source/images/**/*.png', 'source/images/**/*.jpg'])
     .pipe(gulpIf(!isDevelopment, squoosh()))
     .pipe(gulp.dest('build/images'))
 }
@@ -104,7 +104,7 @@ function reloadServer(done) {
 
 function watchFiles() {
   gulp.watch('source/sass/**/*.scss', gulp.series(processStyles));
-  gulp.watch('source/js/script.js', gulp.series(processScripts));
+  gulp.watch('source/js/index.js', gulp.series(processScripts));
   gulp.watch('source/*.html', gulp.series(processMarkup, reloadServer));
 }
 
