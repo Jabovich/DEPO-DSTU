@@ -1,6 +1,12 @@
 const popularBlock = document.querySelector('#popular-swiper');
 const popularWrapper = document.querySelector('#popular-wrapper');
 const popularSlides = document.querySelectorAll('#popular-slide');
+const mobileHeaderMenu = document.querySelector('.mobile-header__nav-list');
+const burgerButton = document.querySelector('.mobile-header__burger');
+
+burgerButton.addEventListener('click', () => {
+  mobileHeaderMenu.classList.toggle('mobile-header__nav-list--close')
+})
 
 const toggleSwiper = () => {
   popularBlock.classList.add('swiper');
@@ -42,3 +48,5 @@ const toggleChapterSlider = () => {
     },
   });
 }
+
+
