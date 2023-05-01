@@ -1,0 +1,31 @@
+.about-chapters {
+  border-bottom: 1px solid #000000;
+}
+
+.about-chapters__wrapper {
+  max-width: 1365px;
+  margin: 0 auto;
+  padding: 35px 37px 60px;
+
+  @media (max-width: 768px) {
+    padding: 30px 10px;
+  }
+}
+
+.about-chapters__heading {
+  margin-bottom: 11px;
+}
+
+.about-chapters__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    gap: 10px;
+  }
+
+  @media (max-width: 630px) {
+    grid-template-columns: 1fr;
+  }
+}

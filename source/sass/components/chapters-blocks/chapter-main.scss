@@ -1,51 +1,200 @@
-$firstBackground: "../../images/chapter-backgrounds/art-first.jpg";
-$secondBackground: "../../images/chapter-backgrounds/art-second.svg";
-$thirdBackground: "../../images/chapter-backgrounds/art-second-rotate.svg";
+$firstArtBackground: "../../images/chapter-backgrounds/art-first.jpg";
+$firstMediaBackground: "../../images/chapter-backgrounds/media-first.jpg";
+$firstProfBackground: "../../images/chapter-backgrounds/prof-first.jpg";
+$firstCouchBackground: "../../images/chapter-backgrounds/couch-first.jpg";
+$secondArtBackground: "../../images/chapter-backgrounds/art-second.svg";
+$secondMediaBackground: "../../images/chapter-backgrounds/media-second.svg";
+$secondProfBackground: "../../images/chapter-backgrounds/prof-second.svg";
+$secondCouchBackground: "../../images/chapter-backgrounds/couch-second.svg";
 
 .chapter-main {
   width: 100%;
-  background:
-    url($firstBackground) top no-repeat,
-    linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.499124649859944) 50%, rgba(255, 255, 255, 1) 100%) 825px,
-    url($secondBackground) 0 825px repeat;
-  background-size: 100% 825px, 100% 100%, 100% 927px;
-  position: relative;
 
-  @media (min-width: 1440px) {
+  &--art {
     background:
-      url($firstBackground) top no-repeat,
+      url($firstArtBackground) top no-repeat,
       linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.499124649859944) 50%, rgba(255, 255, 255, 1) 100%) 825px,
-      url($secondBackground) 0 825px repeat;
-    background-size: 100% 825px, 100% 1100px;
+      url($secondArtBackground) 0 825px repeat;
+    background-size: 100% 825px, 100% 100%, 100% 927px;
+    position: relative;
+
+    @media (min-width: 1440px) {
+      background:
+        url($firstArtBackground) top no-repeat,
+        linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.499124649859944) 50%, rgba(255, 255, 255, 1) 100%) 825px,
+        url($secondArtBackground) 0 825px repeat;
+      background-size: 100% 825px, 100% 1100px;
+    }
+
+    @media (max-width: 1024px) {
+      background:
+        url($firstArtBackground) top no-repeat,
+        linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.499124649859944) 50%, rgba(255, 255, 255, 1) 100%) 670px,
+        url($secondArtBackground) 0 670px repeat;
+      background-size: 100% 670px, 100% 730px;
+    }
+
+    @media (max-width: 768px) {
+      background:
+        url($firstArtBackground) top no-repeat,
+        linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.499124649859944) 50%, rgba(255, 255, 255, 1) 100%) 455px,
+        url($secondArtBackground) 0 455px repeat;
+      background-size: 100% 460px, 100% 460px;
+    }
+
+    @media (max-width: 440px) {
+      background: url($firstArtBackground) top no-repeat,
+        url($secondArtBackground) 0 825px no-repeat;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        opacity: 0.5;
+      }
+    }
   }
 
-  @media (max-width: 1024px) {
+  &--media {
     background:
-      url($firstBackground) top no-repeat,
-      linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.499124649859944) 50%, rgba(255, 255, 255, 1) 100%) 670px,
-      url($secondBackground) 0 670px repeat;
-    background-size: 100% 670px, 100% 730px;
+      url($firstMediaBackground) top no-repeat,
+      linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.499124649859944) 50%, rgba(255, 255, 255, 1) 100%) 825px,
+      url($secondMediaBackground) 0 825px repeat;
+    background-size: 100% 825px, 100% 100%, 100% 927px;
+    position: relative;
+
+    @media (min-width: 1440px) {
+      background:
+        url($firstMediaBackground) top no-repeat,
+        linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.499124649859944) 50%, rgba(255, 255, 255, 1) 100%) 825px,
+        url($secondMediaBackground) 0 825px repeat;
+      background-size: 100% 825px, 100% 1100px;
+    }
+
+    @media (max-width: 1024px) {
+      background:
+        url($firstMediaBackground) top no-repeat,
+        linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.499124649859944) 50%, rgba(255, 255, 255, 1) 100%) 670px,
+        url($secondMediaBackground) 0 670px repeat;
+      background-size: 100% 670px, 100% 730px;
+    }
+
+    @media (max-width: 768px) {
+      background:
+        url($firstMediaBackground) top no-repeat,
+        linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.499124649859944) 50%, rgba(255, 255, 255, 1) 100%) 455px,
+        url($secondMediaBackground) 0 455px repeat;
+      background-size: 100% 460px, 100% 460px;
+    }
+
+    @media (max-width: 440px) {
+      background: url($firstMediaBackground) top no-repeat,
+        url($secondMediaBackground) 0 825px no-repeat;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        opacity: 0.5;
+      }
+    }
   }
 
-  @media (max-width: 768px) {
+  &--prof {
     background:
-      url($firstBackground) top no-repeat,
-      linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.499124649859944) 50%, rgba(255, 255, 255, 1) 100%) 455px,
-      url($secondBackground) 0 455px repeat;
-    background-size: 100% 460px, 100% 460px;
+      url($firstProfBackground) top no-repeat,
+      linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.499124649859944) 50%, rgba(255, 255, 255, 1) 100%) 825px,
+      url($secondProfBackground) 0 825px repeat;
+    background-size: 100% 825px, 100% 100%, 100% 927px;
+    position: relative;
+
+    @media (min-width: 1440px) {
+      background:
+        url($firstProfBackground) top no-repeat,
+        linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.499124649859944) 50%, rgba(255, 255, 255, 1) 100%) 825px,
+        url($secondProfBackground) 0 825px repeat;
+      background-size: 100% 825px, 100% 1100px;
+    }
+
+    @media (max-width: 1024px) {
+      background:
+        url($firstProfBackground) top no-repeat,
+        linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.499124649859944) 50%, rgba(255, 255, 255, 1) 100%) 670px,
+        url($secondProfBackground) 0 670px repeat;
+      background-size: 100% 670px, 100% 730px;
+    }
+
+    @media (max-width: 768px) {
+      background:
+        url($firstProfBackground) top no-repeat,
+        linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.499124649859944) 50%, rgba(255, 255, 255, 1) 100%) 455px,
+        url($secondProfBackground) 0 455px repeat;
+      background-size: 100% 460px, 100% 460px;
+    }
+
+    @media (max-width: 440px) {
+      background: url($firstProfBackground) top no-repeat,
+        url($secondProfBackground) 0 825px no-repeat;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        opacity: 0.5;
+      }
+    }
   }
 
-  @media (max-width: 440px) {
-    background: url("../../images/chapter-backgrounds/art-first.jpg") top no-repeat,
-      url("../../images/chapter-backgrounds/art-second.jpg") 0 825px no-repeat;
+  &--couch {
+    background:
+      url($firstCouchBackground) top no-repeat,
+      linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.499124649859944) 50%, rgba(255, 255, 255, 1) 100%) 825px,
+      url($secondCouchBackground) 0 825px repeat;
+    background-size: 100% 825px, 100% 100%, 100% 927px;
+    position: relative;
 
-    &::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: #ffffff;
-      opacity: 0.5;
+    @media (min-width: 1440px) {
+      background:
+        url($firstCouchBackground) top no-repeat,
+        linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.499124649859944) 50%, rgba(255, 255, 255, 1) 100%) 825px,
+        url($secondCouchBackground) 0 825px repeat;
+      background-size: 100% 825px, 100% 1100px;
+    }
+
+    @media (max-width: 1024px) {
+      background:
+        url($firstCouchBackground) top no-repeat,
+        linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.499124649859944) 50%, rgba(255, 255, 255, 1) 100%) 670px,
+        url($secondCouchBackground) 0 670px repeat;
+      background-size: 100% 670px, 100% 730px;
+    }
+
+    @media (max-width: 768px) {
+      background:
+        url($firstCouchBackground) top no-repeat,
+        linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.499124649859944) 50%, rgba(255, 255, 255, 1) 100%) 455px,
+        url($secondCouchBackground) 0 455px repeat;
+      background-size: 100% 460px, 100% 460px;
+    }
+
+    @media (max-width: 440px) {
+      background: url($firstCouchBackground) top no-repeat,
+        url($secondCouchBackground) 0 825px no-repeat;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        opacity: 0.5;
+      }
     }
   }
 }

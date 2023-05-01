@@ -1,7 +1,7 @@
+@import "./global/colors.scss";
 @import "./global/fonts.scss";
 @import "./global/global.scss";
 @import "./global/theme.scss";
-@import "./global/colors.scss";
 
 
 @import "./components/global-blocks/header.scss";
@@ -27,3 +27,9 @@
 @import "./components/chapters-blocks/articles.scss";
 @import "./components/chapters-blocks/a-card.scss";
 @import "./components/chapters-blocks/chapter-slider.scss";
+
+@import "./components/about-page/a-chapter-card.scss";
+@import "./components/about-page/about-article.scss";
+@import "./components/about-page/about-chapters.scss";
+@import "./components/about-page/partnership.scss";
+@import "./components/about-page/partnets.scss";
