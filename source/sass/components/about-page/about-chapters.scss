@@ -1,5 +1,9 @@
 .about-chapters {
   border-bottom: 1px solid #000000;
+
+  @media (max-width: 540px) {
+    border: 0;
+  }
 }
 
 .about-chapters__wrapper {
@@ -9,6 +13,10 @@
 
   @media (max-width: 768px) {
     padding: 30px 10px;
+  }
+
+  @media (max-width: 540px) {
+    padding: 30px 20px;
   }
 }
 
