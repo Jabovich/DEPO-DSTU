@@ -1,0 +1,124 @@
+.experts {
+  overflow: hidden;
+}
+
+.experts__heading {
+  font-family: $YesevaOne;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 64px;
+  padding: 48px 0 48px;
+  text-align: center;
+  margin: 0;
+
+  @media (max-width: 1024px) {
+    font-size: 41px;
+    line-height: 47px;
+  }
+}
+
+.experts__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.experts__item {
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--first {
+    background-image: url("../../../images/experts-back/expert-back-1.jpg");
+  }
+
+  &--second {
+    background-image: url("../../../images/experts-back/expert-back-2.jpg");
+  }
+
+  &--third {
+    background-image: url("../../../images/experts-back/expert-back-3.jpg");
+  }
+
+  &--fourth {
+    background-image: url("../../../images/experts-back/expert-back-4.jpg");
+  }
+}
+
+.experts__wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 37px;
+
+  &--reverse {
+    flex-direction: row-reverse;
+
+    & p {
+      color: $text-black;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 10px;
+  }
+}
+
+.experts__text-block {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  gap: 15px;
+  width: min-content;
+}
+
+.experts__title {
+  font-family: $YesevaOne;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 61px;
+  line-height: 70px;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: max-content;
+
+  @media (max-width: 1024px) {
+    font-size: 41px;
+    line-height: 47px;
+  }
+}
+
+.experts__description {
+  font-family: $Muller;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 131%;
+  align-self: center;
+  max-width: 70%;
+  color: #ffffff;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+    line-height: 131%;
+  }
+}
+
+.experts__pic-block {
+  padding: 0;
+  margin-bottom: -4px;
+  max-width: 100%;
+
+  @media (max-width: 1024px) {
+    position: sticky;
+    left: -150px;
+    right: -150px;
+  }
+}
+
+.experts__image {
+  margin-top: -100px;
+  object-fit: contain;
+  max-width: 522px;
+  width: max-content;
+}
