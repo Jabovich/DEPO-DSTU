@@ -6,8 +6,18 @@
   list-style-type: none;
 }
 
+html,
 body {
-  height: 100vh;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
 }
 
 a {

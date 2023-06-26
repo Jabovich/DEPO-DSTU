@@ -1,5 +1,7 @@
 .chapter-slider {
   padding: 167px 0;
+  position: relative;
+  z-index: 2;
 
   @media (max-width: 768px) {
     padding: 92px 0 66px;

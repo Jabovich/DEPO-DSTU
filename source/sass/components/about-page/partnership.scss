@@ -66,15 +66,15 @@
     background-color: transparent;
     border: 1px solid rgba(22, 22, 22, 0.5);
     position: absolute;
-    left: 0;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%) rotate(-5deg);
+    transform: translateY(-50%) translateX(-50%) rotate(-5deg);
     border-radius: 70%;
   }
 
   &::before {
     content: '';
-    width: 80%;
+    width: 90%;
     height: 200%;
     background-color: transparent;
     border: 1px solid rgba(22, 22, 22, 0.5);
@@ -88,11 +88,21 @@
   &:hover {
 
     &::before {
-      border: 1px solid #000000;
+      width: 90%;
     }
 
     &::after {
-      border: 1px solid #000000;
+      width: 80%;
+    }
+  }
+
+  &:active {
+    &::before {
+      border: 1px solid #FEC65A;
+    }
+
+    &::after {
+      border: 1px solid #FEC65A;
     }
   }
 }

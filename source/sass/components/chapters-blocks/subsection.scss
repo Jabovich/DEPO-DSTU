@@ -1,46 +1,53 @@
 .subsections {
-    max-width: 75%;
+  max-width: 75%;
 
-    @media (max-width: 440px) {
-        max-width: 100%;
-    }
+  @media (max-width: 440px) {
+    max-width: 100%;
+  }
 }
 
 .subsection__list {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 22px;
-    row-gap: 16px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 22px;
+  row-gap: 16px;
+  justify-content: center;
 
-    @media (max-width: 440px) {
-        column-gap: 5px;
-        row-gap: 7px;
-    }
+  @media (max-width: 440px) {
+    column-gap: 5px;
+    row-gap: 7px;
+  }
 }
 
 .subsection__item {
-    font-family: $Muller;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 100%;
-    width: auto;
-    max-width: 60%;
-    padding: 16px 16px 12px;
-    background: #FFFFFF;
-    border: 1px solid #161616;
-    border-radius: 25px;
-    text-transform: uppercase;
+  font-family: $Muller;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 100%;
+  width: auto;
+  max-width: 60%;
+  padding: 16px 16px 12px;
+  background: #FFFFFF;
+  border: 1px solid #161616;
+  border-radius: 25px;
+  text-transform: uppercase;
+  cursor: pointer;
 
-    &--active {
-        background: #161616;
-        color: #ffffff;
-        border: 1px solid #ffffff;
-    }
+  &:hover {
+    background: #161616;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
 
-    @media (max-width: 440px) {
-        font-size: 12px;
-        padding: 9px 23px 5px;
-    }
+  &:active {
+    background: #161616;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  @media (max-width: 440px) {
+    font-size: 12px;
+    padding: 9px 23px 5px;
+  }
 }
