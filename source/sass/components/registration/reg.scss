@@ -1,0 +1,142 @@
+.reg {
+  padding-top: 71px;
+  height: 100%;
+  box-sizing: border-box;
+
+  @media (min-width: 540px) {
+    padding-top: 0;
+  }
+}
+
+.reg__wrapper {
+  padding: 54px 18px;
+  max-width: 373px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 768px) {}
+}
+
+.reg__heading {
+  font-family: $YesevaOne;
+  font-weight: 400;
+  font-size: 31px;
+  color: $text-black;
+  margin-bottom: 50px;
+
+  @media (min-width: 768px) {
+    font-size: 48px;
+  }
+}
+
+.reg__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 39px;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+
+  margin-bottom: 31px;
+}
+
+.input-block__label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+
+  color: #535353;
+  font-size: 14px;
+  font-family: $Muller;
+  font-weight: 300;
+  position: relative;
+
+  @media (min-width: 768px) {
+    font-size: 17px;
+  }
+}
+
+.input-block__input {
+  background-color: transparent;
+  border: 1px solid #161616;
+  border-radius: 25px;
+
+  font-family: $Muller;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 10px 22px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.reg__check-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 31px;
+
+  @media (min-width: 768px) {
+    max-width: 80%;
+  }
+}
+
+.reg__checkbox-label {}
+
+.reg__checkbox {}
+
+.reg__check-text {
+  color: #535353;
+  font-size: 14px;
+  font-family: $Muller;
+  font-style: normal;
+  font-weight: 300;
+  text-align: left;
+}
+
+.reg__submit {
+  background-color: transparent;
+  border: 1px solid #161616;
+  color: #161616;
+  text-align: center;
+  font-size: 14px;
+  line-height: 123%;
+  font-family: $YesevaOne;
+  font-weight: 400;
+  padding: 8px 21px;
+  width: 80%;
+  max-width: 253px;
+  border-radius: 25px;
+
+  @media (min-width: 768px) {
+    font-size: 17px;
+  }
+}
+
+.reg__link {
+  color: #535353;
+  text-align: center;
+  font-size: 14px;
+  font-family: $Muller;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-decoration-line: underline;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+}
