@@ -4,6 +4,10 @@
   flex-direction: column;
   margin: 0 auto;
   padding: 118px 0 118px;
+
+  @media (max-width: 768px) {
+    padding: 50px 23px;
+  }
 }
 
 .user-form__heading {
@@ -21,6 +25,11 @@
   font-size: 48px;
   line-height: 55px;
   color: $text-black;
+
+  @media (max-width: 768px) {
+    font-size: 31px;
+    line-height: normal;
+  }
 }
 
 .user-form__chapter {
@@ -29,6 +38,10 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 24px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .user-form__form {
@@ -43,12 +56,16 @@
   gap: 25px;
   align-items: center;
   margin-bottom: 45px;
+  width: 100%;
+  max-width: 373px;
 }
 
 .user-form__label {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
 
   font-family: $Muller;
   font-style: normal;
@@ -59,12 +76,13 @@
 }
 
 .user-form__input {
-  width: 373px;
+  width: 100%;
   font-family: $Muller;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 18px;
   line-height: 18px;
+  box-sizing: border-box;
 
   padding: 14px 22px;
   border-radius: 25px;

@@ -2,4 +2,13 @@
   height: 100%;
   display: grid;
   grid-template-columns: 212px 1fr;
+
+  @media (max-width: 768px) {
+    grid-template-columns: unset;
+    grid-template-rows: min-content 1fr;
+  }
+
+  @media (max-width: 540px) {
+    padding-top: 68px;
+  }
 }
