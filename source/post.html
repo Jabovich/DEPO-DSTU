@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
+    
+    
   <title>ДЕПО ЭКСПЕРТЫ</title>
 </head>
 
@@ -171,7 +173,229 @@
         </div>
 
         <button class="post__save-button">Сохранить в закладках</button>
+          
       </div>
+        <style>
+            .comm{
+                display: flex; 
+                justify-content: center;
+            }
+            .comm__wrapper {
+                width: 768px;
+            }
+            
+            .comm__heading-title{
+                font-family: "YesevaOne","Play Fair",sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 35px;
+                line-height: 45px;
+                padding-bottom: 20px
+
+                color: #161616;
+
+                @media (max-width: 768px) {
+                    font-size: 25px;
+                    line-height: 39px;
+                }
+
+                @media (max-width: 440px) {
+                    font-size: 25px;
+                    line-height: 29px;
+                }
+            }
+            
+            .comm__splitLine{
+                border-bottom: 2px solid #000;
+            }
+            
+            .comm__field{
+                max-width: 768px; 
+                height: 126px; 
+                border: 1.5px solid #000; 
+                border-radius: 25px; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .comm__inputComm {
+                background-color: transparent;
+                border: 0;
+                color: $grey-color;
+                font-family: $Muller;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 123%;
+                opacity: .5;
+                width: 250px;
+            }
+            
+            .comm__addBtnZone{
+                display: flex; 
+                justify-content:flex-end; 
+                padding-top: 10px;
+            }
+            
+            .comm__addComm-btn {
+                background-color: #FD7B9A;
+                font-family: "YesevaOne","Play Fair",sans-serif;
+                font-style: normal;
+                color: white;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 123%;
+                border: 1px solid #000;
+                border-radius: 25px;
+                padding: 10px 20px;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .comm__addCommPlus {
+                font-size:30px;
+            }
+            .comm__personName{
+                padding-top: 20px; 
+                font-family: "Muller","Arial",sans-serif;
+                font-style: normal;
+                line-height: 131%;
+                color: $grey-color;
+            }
+            
+            .comm__ourName {
+                padding-left: 20px;
+                padding-bottom: 10px;
+            }
+            
+            .comm__comment {
+                padding-top: 10px; 
+                padding-left: 20px;
+                font-family: "Muller","Arial",sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 131%;
+            }
+            .btn {
+               border:none;
+               background-color: transparent;
+            }
+            .comm__changes-btn {
+                padding-top: 10px; 
+                display:inline;
+                float:left;
+                
+                font-family: "Muller","Arial",sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 131%;
+                opacity: .5;
+            }
+            
+            .comm_delete-btn {
+               padding-top: 10px;
+               padding-left: 20px;
+               display:inline;
+               float:right; 
+                
+               font-family: "Muller","Arial",sans-serif;
+               font-style: normal;
+               font-weight: 300;
+               font-size: 16px;
+               line-height: 131%;
+               opacity: .5;
+               vertical-align: 2px;
+            }
+            
+            .comm__rating {
+                padding-top: 10px; 
+                padding-left: 20px;
+            }
+            .iconLike{
+                width: 18px;
+                height: 18px;
+                fill: black;
+            }
+            .iconDisLike{
+                padding-left: 5px;
+                width: 18px;
+                height: 18px;
+                fill: black;
+            }
+            .numRating{
+                display:inline;
+                font-family: "Muller","Arial",sans-serif;
+                font-style: normal;
+                color: #A8A8A8;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 131%;
+                vertical-align: 2px;
+            }
+
+        </style>
+        <!-- комментарии начало -->
+        <section class="comm">
+            <div class="comm__wrapper">
+                <h1 class="comm__heading-title">5 комментариев</h1>
+                <div class="comm__splitLine"></div>
+                <div class="comm__ourComm">
+                    <p class="comm__personName comm__ourName">Иван Иванов</p>
+                    
+                    <div class="comm__field">
+                        <div style="margin: 30px;">
+                            <input class="comm__inputComm" type="text" id="" placeholder="Добавьте свой комментарий..."></input>
+                        </div>
+                    </div>
+                    
+                    <div class="comm__addBtnZone">
+                        <button type="submit" class="comm__addComm-btn">Добавить комментарий <span class="comm__addCommPlus">+</span> 
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <p class="comm__personName">Михаил Исатов</p>
+                    <p class="comm__comment">Очень интересеная статья! 11 из 10 !</p>
+                    <div class="comm__rating">
+                        <button class="btn">
+                            <img class="iconLike" src="images/svg/like.svg">
+                            <p class="numRating">5</p>
+                        </button>
+                        <button class="btn">
+                            <img class="iconDisLike" src="images/svg/dislike.svg">
+                            <p class="numRating">5</p>
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <p class="comm__personName">Иван Иванов</p>
+                    <p class="comm__comment">Очень интересеная статья! 11 из 10 !</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div class="comm__rating">
+                             <button class="btn">
+                                 <img class="iconLike" src="images/svg/like.svg">
+                                 <p class="numRating">8</p>
+                             </button>
+                            
+                             <button class="btn">
+                                 <img class="iconDisLike" src="images/svg/dislike.svg">
+                                 <p class="numRating">3</p>
+                             </button>
+                        </div>
+                        <div>
+                            <button class="comm__changes-btn btn">Изменить</button>
+                            <button class="comm_delete-btn btn">Удалить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- комментарии конец -->
+      
     </section>
   </main>
   <footer class="footer">
